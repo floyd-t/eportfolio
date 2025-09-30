@@ -25,33 +25,18 @@
 </section>
 
 <section>
-  <h2 style="text-align:center;">Your Title Here</h2>
-  <p>First paragraph of text…</p>
-  <p>Second paragraph if needed…</p>
-  <ul>
-    <li>List item 1</li>
-    <li>List item 2</li>
-  </ul>
+  <p>The state transition diagram was essential for defining the robot’s cycle between various states. It outlined permissible transitions between states such as “IDLE”, “INITIALIZING”, “READY”, “PERCEIVING”, “PLANNING”, “ACTING” and “SHUTTING_DOWN”. This diagram guided the implementation of the finite state machine within the system, ensuring that transitions followed logical rules and prevented invalid operations. The value of this artefact became particularly apparent when handling error conditions, safeguarding the system against wrong operations and assisting the system with being able to test itself properly. Below is a screenshot of it: </p>
+  <img src="images/UML_State_Transition_Diagram_Screenshot.png" alt="State Transition Diagram">
 </section>
 
 <section>
-  <h2 style="text-align:center;">Your Title Here</h2>
-  <p>First paragraph of text…</p>
-  <p>Second paragraph if needed…</p>
-  <ul>
-    <li>List item 1</li>
-    <li>List item 2</li>
-  </ul>
+  <p>The activity diagram focused on the “perceive–plan–act” loop, this diagram represented the flow of information through the system, from sensor input to planning and then completing actions via actuators. In the finished system, it became the “perceive_plan_act()” function. The clarity of this diagram was beneficial for development, its simple loop allowed for straightforward coding. Below is a screenshot of it: </p>
+  <img src="images/UML_Activity_Screenshot.png" alt="Activity Diagram">
 </section>
 
 <section>
-  <h2 style="text-align:center;">Your Title Here</h2>
-  <p>First paragraph of text…</p>
-  <p>Second paragraph if needed…</p>
-  <ul>
-    <li>List item 1</li>
-    <li>List item 2</li>
-  </ul>
+  <p>The sequence diagram illustrated the order in which components communicated during tasks such as picking up objects and placing them elsewhere. This diagram contributed towards the “pick_and_place()” function. The diagram demonstrated how the user, sensors and actuators interact, and this was implemented well into the finished system. Below is a screenshot of it: </p>
+  <img src="images/UML_Sequence_Diagram_Screenshot.png" alt="Sequence Diagram">
 </section>
 
 <section>
