@@ -70,6 +70,17 @@
   <p>Individual Coding Exercise: Banking System</p>
   <p>The first key artefact in this portfolio to examine is the Thread-Safe Banking System, developed as part of the Individual Coding Exercise. The purpose of this task was to design and implement a banking system where multiple simulated users could perform transactions at one time without compromising data integrity or security. This exercise directly aligned with the module’s learning outcomes on secure coding and advanced object-oriented design. </p>
   <p>The system was developed in Python using classes to encapsulate account data and ensure modularity. The “BankAccount” class contained attributes for account number and balance, alongside methods for deposits, withdrawals and balance retrieval. To address concurrency issues, the “threading.Lock” mechanism was integrated to synchronise access to shared resources. Each financial operation acquired a lock before modifying the account balance, effectively preventing race conditions. Deadlock prevention was also ensured by designing a lock acquisition order.  The below screenshot is the “bankAccount” class, with annotations explaining its function: </p>
-  
+  <img src="images/BankSystemMain.png" alt="Bank_Main">
+  <p>The below screenshot is an annotated version of the logger, with the “threading.Lock” mechanism: </p>
+  <img src="images/BankSystemLogger.png" alt="Bank_Logger">
+  <p>A secondary class called “transactionSimulator” was implemented to simulate concurrent transactions using multiple threads. This class executed repeated deposit and withdrawal operations to test the system. The program’s output confirmed that balances remained consistent regardless of transaction order or volume, which validated the system’s thread safety. The next screenshot is the transaction file that allowed for simulation of the transactions: </p>
+  <img src="images/BankSystemTransaction.png" alt="Bank_Transaction">
+  <p>To verify reliability, unit tests were developed using Python’s “unittest” framework. These tests simulated concurrent use and simulated actual balances. This demonstrated that the program maintained data consistency under concurrent conditions changing, an essential indicator of secure and well-structured code. Below are two examples of the end of the output, showing the variety of final result: </p>
+  <img src="images/BankSystemOutcome2.png" alt="Bank_Outcome_2">
+  <img src="images/BankSystemOutcome1.png" alt="Bank_Outcome_1">
+  <p>The key challenges of this system included testing race conditions during earlier stages and ensuring that threads terminated cleanly. Through iterative testing and debugging, the making of this system allowed for personal growth, strengthening understandings of synchronisation, thread use as well as data consistency environments with concurrent actions. </p>
+  <br>
+  <br>
+  <p>Humanoid Robot System </p>
 </section>
 
