@@ -92,7 +92,45 @@
   <p>Finally, the class diagram: </p>
   <img src="images/UML_Class_Screenshot.png" alt="UML_Class">
   <p>At the centre of the design was the “Robot” class, which encapsulated properties such as status, tasks and environmental inputs. It coordinated interactions with various subclasses that represented specific actions, for example walking or picking up objects. Encapsulation protected the robot’s internal state, while inheritance and polymorphism allowed for flexible extension of behaviours without modifying existing code. Below is a screenshot of the file structure: </p>
-  
-  
+  <img src="images/Humanoid_Robot_File_Structure.png" alt="Humanoid_File_Structure">
+  <p>Implementation of testing routines were used within a “tests” module to validate class relationships and functional accuracy. This included automated checks for sensor data handling, state transitions and sequence execution. The use of assertions helped maintain robustness throughout testing. The below screenshot is the code that allowed assertions to test the system: </p>
+  <img src="images/Humanoid_Robot_Assert_Tests.png" alt="Humanoid_Assert_Test">
+  <p>The below screenshot is an example output from testing this code using the terminal, note the assertion tests, and then the simulated randomness of the outputs to allow a better variety in test results: </p>
+  <img src="images/Humanoid_Robot_Terminal_Screenshot_Censored.png" alt="Humanoid_Result">
+  <p>During development, several challenges were encountered and resolved regarding import errors and modular dependencies in Python’s package structure. Through this debugging process, lessons were learned in the importance of proper directory management and the use of relative imports when working with projects using large numbers of modules. </p>
+  <p>Ultimately, the project demonstrated the process of designing an object-oriented system that was both extensible and maintainable. The inclusion of UML modelling, systematic testing and modular design added quality to the application of advanced OOP principles to a system that one day may need to be designed. The experience also reinforced understandings of software architecture, design patterns and project organisation. These skills are directly applicable to professional software engineering practice. </p>
+  <br>
+  <br>
+  <p>Case Studies </p>
+  <p>Throughout the module, various case studies were explored regarding software architecture, security, and AI’s adaptability during development. These case studies provided theoretical grounding and information that assisted in the development process, although not directly, but through influence. </p>
+  <p>One significant case study (Jamshidifar and Afshar, 2017) examined secure software architecture for large-scale systems, with a focus on layered design and its role in maintaining system robustness. Lessons were learned regarding how separating business logic and data layers improves scalability and simplifies debugging during both the building of the system and later testing. This style of case study assisted in reasoning as to why code modules in the earlier artefacts were structured to reduce interdependency and enhance security boundaries. Similar case studies discuss the efficiency of these in certain environments (‌Bäumer et al., n.d), which leads to the issue of ensuring that large-scale use of object-oriented systems remains effective regardless of industry. </p>
+  <p>Another case study explored design patterns and maintainability‌ (Gopal, M.K., 2014). These insights proved valuable in the humanoid robot project, where I later applied the “Factory Pattern” to generate different sensor classes dynamically. </p>
+  <p>Finally, another case study (Lepp, M. and Kaimre, J. 2025) was related to AI and its use in object-oriented programming, specifically AI’s proficiency and its ability to complete academic object-oriented programming courses. This is a cause for concern regarding the future use of OOP, as it would potentially allow for AI to eventually make programs without fault or error from very simple prompts, therefore bringing into question the validity of a lot of testing regarding the legitimacy of the ownership of code, as students may, in an attempt to make their code as efficient as possible, incidentally make code similar to the advanced AI. This extends into the debate regarding how to test for AI use, as it is still not perfect due to its reliance on examining known irregularities that occur in AI generated coding. </p>
+  <p>These case studies were useful for enhancing critical thinking and analytical skills, which assisted helping bridge the gap between theory and practice. They also demonstrated how design decisions at the conceptual level contribute to secure scalable and adaptable software systems, qualities which were attempted to exist in the artefacts shown earlier. </p>  
+  <br>
+  <br>
 </section>
+
+<section>
+  <h2 style="text-align:center;">Reflection on Skill Development </h2>
+  <p>Critical Thinking and Analysis</p>
+  <p>Throughout this module my critical thinking and analytical abilities have developed significantly. The process of designing systems required me to analyse requirements and evaluate multiple ideas for implementation before making design decisions. For example, during the development of the thread-safe banking system, I had to assess how concurrency would be best implemented, and explored several mechanisms. After evaluating the trade-offs, I chose to implement “threading.Lock” for simplicity and efficiency, in an attempt to best demonstrate analytical reasoning. </p>
+  <p>Similarly, in the humanoid robot project, critical thinking was essential when interpreting UML diagrams and determining how class relationships should be structured. The process of designing, testing and debugging deepened my understanding of how OOP concepts translate into code. Learning to approach errors as analytical opportunities was key, each bug or unexpected result revealed a flaw in my understanding of Python’s system, and allowed for much more substantial personal development. This module strengthened my capacity to approach complex problems systematically, evaluate multiple perspectives and justify my technical decisions through logic and evidence. </p>
+  <p>Problem Solving </p>
+  <p>The problem-solving aspect of this module was evident in the handling of debugging and troubleshooting. Early in the course, I encountered issues with concurrent operations that led to data inconsistencies in the banking system. Solving these issues required me to visualise how multiple threads interacted with shared data. By applying locking mechanisms and testing extensively, I learned the importance of breaking large challenges into manageable parts. </p>
+  <p>These experiences serve as a reminder that problem-solving in software development is as much about fixing issues as it is about developing a mindset of persistence and analytical thought. The knowledge that each obstacle contributes to deeper understanding and long-term skill development. </p>
+  <p>Research and Self Study</p>
+  <p>Independent research and self-study played a crucial role in my progress throughout the module. I frequently consulted tutorials (the ones at the beginning of the references section, while some are linked on pages such as tuples, it includes the other basic concept tutorials accessible on these websites) to reinforce my understanding and knowledge. For instance, while working on thread safety, I explored various Python libraries to gain a broader understanding of best practices. </p>
+  <p>Similarly, I researched design patterns to understand their applicability in real-world systems. This self-directed learning allowed me to extend my knowledge and connect theoretical design patterns to my own work. </p>
+  <p>Time Management </p>
+  <p>Managing multiple assessments and projects simultaneously required careful planning and prioritisation. I developed a weekly schedule that allocated a certain amount of time for research and documentation. This structure ensured steady progress while maintaining balance across tasks. Also allotting certain amounts of time to certain assignments so that I didn’t fall behind on individual tasks was also essential, for example making sure I had enough time to complete the write ups and reports for my submissions. </p>
+  <p>Completing the humanoid robot project in tandem with the banking system tested my ability to meet deadlines without compromising quality. Through consistent time management, I learned to set realistic goals and adjust time spent on tasks as needed. </p>
+  <p>Technical Communication and Literacy</p>
+  <p>This module also strengthened my technical ability at writing literate code. Writing clear code and inline comments requires precision and accuracy. Also by practicing structured academic writing, such as in this e-Portfolio, my ability to communicate not only what I built, but why I built it in the way that I did was tested. This combination of technical and academic literacy is essential for professional roles in the real world where developers must justify design decisions and contribute effectively. </p>
+  <p>The process of debugging complex systems tested my patience and resilience. Errors persisted despite multiple attempts to fix the issue, persistence, fortunately, allowed me to identify solutions. </p>
+  <br>
+  <br>
+</section>
+
+
 
