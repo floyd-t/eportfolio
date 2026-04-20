@@ -42,15 +42,34 @@
 </section> 
 
 <section>
-  <h2 style="text-align:center;"></h2>
-  <p>
-  <br>
-  <br>
+  <h2 style="text-align:center;">Testing and Validation</h2>
+  <p>Testing played a critical role in validating both the functional and security aspects of the system. A combination of unit testing, functional testing and security testing was employed to ensure the system behaved as expected under different conditions. 
+  <br>The following screenshot is the “menu” of the system, in other screenshots the option number reflects an action from the menu, for example in the screenshot after “Select option: 1” represents registering an account. 
+  <img src="images/Main.png" alt="Main">
+  <br>Account registration, the user needs to create a username and password combo to use the system: 
+  <img src="images/RegisterUser.png" alt="Register">
+  <br>Logging into an account, the system remembers credentials of users during use, however due to the systems simulated nature it always starts with no details saved until the user creates an account:
+  <img src ="images/LoginUser.png" alt="Login">
+  <br>Unit testing was used to verify individual components, particularly within the authentication and security modules. Tests were designed to confirm correct behaviour of password handling, ensuring that secure mode applied hashing while insecure mode retained plain text functionality. These tests helped identify inconsistencies during development, particularly in relation to shared data handling across security modes. 
+  <br>Viewing product lists, due to the nature of the test only one item was created, however creating more items is easy given the nature of Python’s lists: 
+  <img src="images/Products.png" alt="Products">
+  <br>Making an order, the system totals the value of all the items and remembers which user the order was created for: 
+  <img src="images/PlaceOrder.png" alt="Order">
+  <br>Security testing formed a key part of the validation process. Simulated attacks were implemented to assess system resilience under both secure and insecure configurations. A brute force attack simulation demonstrated the effectiveness of rate limiting and account lockout mechanisms in secure mode, while highlighting system vulnerability when these controls were disabled. Similarly, an injection attack simulation tested input validation by attempting to introduce malicious input into the system. In secure mode, validation successfully rejected the input, whereas in insecure mode the attack was accepted, demonstrating the importance of input verification. The below screenshot is the security mode being toggled off: 
+  <img src="images/securemode_off.png" alt="Secure Mode Off">
+  <br>In this screenshot, the injection attack succeeds because the secure mode is turned off:
+  <img src="images/injectionattack_notsecure.png" alt="Secure Mode Off Injection Attack">
+  <br>Whereas in this screenshot, the attack fails because the secure mode is turned on: 
+  <img src="images/injectionattack_secure.png" alt="Secure Mode On Injection Attack">
+  <br>In this screenshot a brute force attack fails because after 3 attempts the system will automatically block attempts to login: 
+  <img src="images/bruteforce_secure.png" alt="Brute Force">
+  <br>Testing also revealed areas for improvement, including the need to apply validation at multiple stages of processing rather than solely at input entry points. This led to the implementation of additional validation checks within order processing, strengthening overall system security. 
+  <br>Code quality was further supported through adherence to PEP-8 standards and the use of development tools within PyCharm. Overall, the testing process was iterative and resulted in refining both functionality and security, ensuring the final system met the intended requirements. 
   </p>
 </section>
 
 <section>
-  <h2 style="text-align:center;"></h2>
+  <h2 style="text-align:center;">Requirements and Assumptions</h2>
   <p>
   <br>
   <br>
@@ -61,6 +80,7 @@
   <h2 style="text-align:center;"></h2>
   <p>
   <br>
+  <img src="images/.png" alt="">
   <br>
   </p>
 </section>
