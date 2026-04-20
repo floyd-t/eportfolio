@@ -70,17 +70,63 @@
 
 <section>
   <h2 style="text-align:center;">Requirements and Assumptions</h2>
-  <p>
-  <br>
-  <br>
+  <p>The system was developed based on a set of functional and security requirements derived from the assignment brief, alongside assumptions made during the design process. Core functional requirements included user authentication, product management and order processing, all of which were implemented through a command-line interface. These features were designed to reflect a simplified online retailer system while maintaining a focus on secure interaction. 
+  <br>Security requirements played a central role in shaping the system design. The need to mitigate common threats such as brute force attacks, injection attacks and denial-of-service scenarios (OWASP, n.d.) informed the inclusion of mechanisms such as input validation, rate limiting, password hashing and event logging. These decisions align with widely recognised security frameworks such as OWASP, which emphasise the importance of reducing attack surfaces and validating all external input (OWASP, 2025).
+  <br>Several assumptions were made to support development. It was assumed that the system would operate in a controlled environment, allowing attacks to be simulated rather than executed at a network level. This influenced the design of denial-of-service mitigation, which was implemented through request throttling rather than full network simulation. Additionally, the use of a simulated external API for payment processing reflects an assumption that sensitive financial data should not be handled directly by the system, thereby reducing security risk. 
+  <br>Overall, the requirements and assumptions guided the development of a system that balances functional simplicity with meaningful security implementation, enabling clear demonstration of secure and insecure behaviours. 
   </p>
 </section> 
 
 <section>
-  <h2 style="text-align:center;"></h2>
-  <p>
-  <br>
-  <img src="images/.png" alt="">
-  <br>
+  <h2 style="text-align:center;">Evaluation of Final Implementation Against Design Proposal</h2>
+  <p>The final implementation of the secure online retailer system largely aligns with the original design proposal developed in Unit 6. The system successfully completes the core architectural, functional and security requirements outlined during the design phase, with several refinements made during development to improve robustness and ease of use. 
   </p>
 </section>
+
+<section>
+  <h2 style="text-align:center;">Architectural Alignment</h2>
+  <p>The system adheres closely to the Model–View–Controller (MVC) architectural pattern defined in the design proposal. The MVC pattern was chosen mainly due to the level of ease it provides in extending or changing code during development (Gamma, E. et al., 1994). The Model layer is implemented through domain classes such as Customer, Product and Order, which encapsulate system state and enforce controlled data access. The View is represented by a command-line interface, enabling user interaction with the system, while the Controller layer manages business logic, including authentication and order processing. 
+  <br>In addition to MVC, the Strategy Pattern was implemented as planned to modularise security behaviour. The introduction of SecureStrategy and InsecureStrategy allows the system to dynamically switch between secure and insecure configurations during runtime. This design decision proved highly effective, enabling direct comparison between protected and vulnerable system states, thereby fulfilling the requirement to demonstrate the impact of security controls. This flexibility during runtime was the main reason it was chosen, the major disadvantage of Strategy Pattern (how it struggles with larger amounts of classes)(Stackify, 2025) would not be a problem with this system due to its limited size. 
+  </p>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Security Features and Enhancements</h2>
+  <p>The implementation successfully incorporates the required security mechanisms, including authentication, authorisation, input validation, logging and session management. Password hashing using SHA-256 is applied in secure mode, while insecure mode intentionally stores passwords in plain text to demonstrate vulnerability. 
+  <br>During development, additional refinements were introduced beyond the original design. Notably, account lockout functionality was added to complement rate limiting, ensuring that brute force attacks are mitigated even if correct credentials are eventually attempted. This enhancement strengthens the system’s defensive capabilities and reflects real-world security practices. 
+  </p>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Handling of Security Modes</h2>
+  <p>A key design requirement was the ability to toggle security features on and off. This was successfully implemented through a centralised configuration component that dynamically assigns the appropriate security strategy. During development, an inconsistency was identified where shared data storage between secure and insecure modes caused mismatches in password verification. This issue was resolved by isolating system state per security configuration, ensuring consistent behaviour across modes. 
+  </p>
+</section> 
+
+<section>
+  <h2 style="text-align:center;">Functional Requirements</h2>
+  <p>All core functional requirements were met. The system supports user registration, authentication and order placement, fulfilling the required CRUD capabilities. The use of Python data structures aligns with the design specification, with dictionaries used for user storage, lists for order tracking and sets for session management. 
+  </p>
+</section> 
+
+<section>
+  <h2 style="text-align:center;">Limitations and Deviations</h2>
+  <p>While the system meets the majority of design requirements, certain limitations remain. The denial-of-service attack is simulated rather than implemented at a network level, due to the constraints of a command-line environment. Additionally, while encryption is represented through hashing, full end-to-end encryption mechanisms were not implemented. 
+  </p>
+</section> 
+
+<section>
+  <h2 style="text-align:center;">Summary</h2>
+  <p>Overall, the final implementation closely reflects the original design while incorporating meaningful improvements identified during development. The system not only meets the specified requirements but also demonstrates a deeper understanding of secure system design through the application of layered security controls and modular architecture. 
+  </p>
+</section>  
+
+<section>
+  <h2 style="text-align:center;">References</h2>
+  <p>OWASP (2025). A05 Injection - OWASP Top 10:2025 RC1. [online] Available at: https://owasp.org/Top10/2025/A05_2025-Injection/. 
+  <br>OWASP (n.d.). Brute Force Attack Software Attack | OWASP Foundation. [online] owasp.org. Available at: https://owasp.org/www-community/attacks/Brute_force_attack. 
+  <br>OWASP (n.d.). Denial of Service Software Attack | OWASP Foundation. [online] owasp.org. Available at: https://owasp.org/www-community/attacks/Denial_of_Service. 
+  <br>Gamma, E. et al. (1994) Design Patterns: Elements of Reusable Object-Oriented Software .Available at: https://www.javier8a.com/itc/bd1/articulo.pdf. 
+  <br>Stackify. (2025). Stackify. [online] Stackify. Available at: https://stackify.com/strategy-pattern-definition-examples-and-best-practices/. 
+  </p>
+</section> 
